@@ -1,0 +1,215 @@
+/* App.css */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.navbar {
+  background-color: #6d28d9;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 1rem; /* Add some margin to the logo */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem; /* Reduce gap between navbar items */
+  margin: 0;
+  padding: 0;
+  margin-right: 1rem; /* Add some margin to the right */
+}
+
+.navbar ul li {
+  cursor: pointer;
+  transition: color 0.2s;
+  font-size: 1rem; /* Ensure consistent font size */
+}
+
+.navbar ul li:hover {
+  color: #d8b4fe;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  margin-top: 6rem; /* To account for the fixed navbar */
+  padding: 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #4c1d95;
+}
+
+.add-todo {
+  margin-bottom: 1.5rem;
+}
+
+.add-todo h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #4c1d95;
+}
+
+.add-todo input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.add-todo input:focus {
+  border-color: #6d28d9;
+}
+
+.add-todo button {
+  background-color: #6d28d9;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.add-todo button:disabled {
+  background-color: #a78bfa;
+  cursor: not-allowed;
+}
+
+.add-todo button:hover:not(:disabled) {
+  background-color: #5b21b6;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.filter input[type="checkbox"] {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.filter label {
+  font-size: 1rem;
+  color: #4c1d95;
+}
+
+.todos {
+  margin-top: 1.5rem;
+}
+
+.todos h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #4c1d95;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.todo-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.todo-item .todo-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.todo-item .todo-content input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+}
+
+.todo-item .todo-content .todo-text {
+  font-size: 1rem;
+  color: #333;
+}
+
+.todo-item .todo-content .todo-text.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.todo-item .buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.todo-item .buttons button {
+  background-color: #6d28d9;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.todo-item .buttons button:hover {
+  background-color: #5b21b6;
+}
+
+.no-todos {
+  text-align: center;
+  color: #666;
+  margin: 2rem 0;
+  font-size: 1rem;
+}
